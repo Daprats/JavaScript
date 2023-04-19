@@ -121,6 +121,7 @@
         console.log(max(numA, numB))
         */
 
+        /*
         var number = Number.parseFloat(prompt('Digite um numero: '))
 
         function mod2(number) {
@@ -137,7 +138,64 @@
         }
 
         console.log(mod2(number))
+        
+        */
 
+        /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        var number = Number.parseFloat(prompt('Digite um numero: '))
+
+        function mod(num, mod) {
+
+            var resultadoNum = number % mod;
+
+            if(resultadoNum == 0)
+            {
+                return true
+            }
+            else if(resultadoNum != 0){
+                return false8
+            }
+
+            mod(number, mod(num, mod))
+            
+        }
+
+        console.log(mod(number, mod))
+        */ 
+
+        /*
+        var frase = prompt('Digite uma frase: ')
+        var char = prompt('Digite um caractér: ')
+    
+        function countChars(frase, c) {
+            var count = 0
+
+            for (let i = 0; i <= frase.length; i++) {
+                
+                if (frase[i] == c) {
+                    count++
+                } 
+            }
+            return count
+        }
+
+        console.log(countChars(frase, char))
+        */ 
+
+        var maximo = Number.parseInt(prompt('Digite um numero: '))
+        var minimo = Number.parseInt(prompt('Digite um numero: '))
+
+        function range(max, min) {
+            var numbers = new Array()
+
+            for (let i = (min+1); i < max; i++) {
+                numbers[i] = i
+            }
+            return numbers
+        }
+
+        console.log(range(maximo, minimo))
     </script>
-</body>
+</body> 
 </html>
+
