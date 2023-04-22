@@ -1,44 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prates</title>
 </head>
+
 <body>
     <script>
+        
         /*
-        var linhas = Number.parseInt(window.prompt('Digite a quantidade de linhas: '))
+        var linhas = Number.parseInt(prompt('Digite a quantidade de linhas: '))
 
-        for (var i = 0; i < linhas; i++) {
-            
+        for (let i = 0; i < linhas; i++) {
             for (var j = 0; j <= (i+1); j++) {
-                
-                document.write('#')
-
+                document.write('#') // n sei pq mas n consegui fazer esse ex usando console.log
             }
             document.write('<br>')
         }
-        
         */
-        
-        /*
-        var linhas = Number.parseInt(window.prompt('Digite a quantidade de linhas: '))
 
-        for (let i = 1; i < linhas; i++) {
+        /*        
+        var linhas = Number.parseInt(prompt('Digite a quantidade de linhas: '))
+
+        for (let i = 0; i < linhas; i++) {
             
             var resultado = i % 2;
 
             if (resultado == 0) {
-                document.write('# # # #&nbsp;')
-            } else {
-                document.write('&nbsp;# # # #')
+                console.log('# # # # ')
+            } 
+            else {
+                console.log(' # # # #')
             }
-
-            document.write('<br>')
+            console.log('\n')
         }
-
         */
 
         /*
@@ -55,13 +53,15 @@
 
            // join: faz o inverso do split, ele concatena as posições e forma apenas uma 
            // posição(as aspas simples serve para que não coloque nada entre as posições)
-
+        
             
 
         if (palavra === palindromo) {
-            document.write('A Palavra é Palindromo')
-        } else {
-            document.write('A palavra NÃO é Palindromo')
+            console.log('A Palavra é Palindromo')
+        } 
+        else 
+        {
+            console.log('A palavra NÃO é Palindromo')
         }
         */
 
@@ -128,40 +128,16 @@
 
             var resultadoNum = number % 2;
 
-            if(resultadoNum == 0)
-            {
+            if (resultadoNum == 0) {
                 return true
             }
-            else if(resultadoNum != 0){
+            else if (resultadoNum != 0) {
                 return false
             }
         }
 
         console.log(mod2(number))
-        
         */
-
-        /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        var number = Number.parseFloat(prompt('Digite um numero: '))
-
-        function mod(num, mod) {
-
-            var resultadoNum = number % mod;
-
-            if(resultadoNum == 0)
-            {
-                return true
-            }
-            else if(resultadoNum != 0){
-                return false8
-            }
-
-            mod(number, mod(num, mod))
-            
-        }
-
-        console.log(mod(number, mod))
-        */ 
 
         /*
         var frase = prompt('Digite uma frase: ')
@@ -180,26 +156,24 @@
         }
 
         console.log(countChars(frase, char))
-        */ 
+        */
 
         /*
-        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        var minimo = Number.parseInt(prompt('Digite um numero minimo: '))
-        var maximo = Number.parseInt(prompt('Digite um numero maximo: '))
-
-        function range(max, min) {
+        var minimo = Number.parseInt(prompt('Digite o numero minimo: '))
+        var maximo = Number.parseInt(prompt('Digite o numero maximo: '))
+        var interv = Number.parseInt(prompt('Digite um intervalo: '))
+        
+        function range(max, min, intervalo) {
             var numbers = new Array()
 
-            for (let i = (min+1); i < max; i++) {
-                numbers[i] = i
+            for (let i = (min+1); i < max; i+= intervalo) {
+                numbers.push(i)
             }
             return numbers
         }
 
-        console.log(range(maximo, minimo))
-    
+        console.log(range(maximo, minimo, interv))
         */
-
         /*
         lista = [1,2,3,4,5,6,7,8,9]
 
@@ -210,8 +184,49 @@
 
         console.log(reverseArray(lista))
         */
-       
-    </script>
-</body> 
-</html>
 
+        /*
+        function toList(array) {
+            if (array.length === 0) {
+                return null
+            }
+            else 
+            {
+                return {
+                    value: array[0],
+                    rest: toList(array.slice(1))
+                }
+            }
+        }
+
+        console.log(toList([1, 2, 3]))
+        */
+
+        /*
+        function endereco(cidade, bairro, rua) {
+                this.cidade = cidade,
+                this.bairro = bairro,
+                this.rua = rua
+        }
+
+        const end1 = new endereco('beaga', 'prates', 'daniel')
+        const end2 = new endereco('beaga', 'prates', 'daniel')
+
+        function deepEquals(obj1, obj2) {
+            for (data in obj1 ) {
+                if( obj1[data] != obj2[data]){ 
+                    return false
+                }
+            }
+            return true
+        }
+        
+        console.log(deepEquals(end1,end2))
+        */
+
+
+
+    </script>
+</body>
+
+</html>
